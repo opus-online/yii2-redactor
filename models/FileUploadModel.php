@@ -10,6 +10,7 @@ namespace yii\redactor\models;
 
 use Yii;
 use yii\helpers\FileHelper;
+use yii\helpers\Url;
 use yii\web\UploadedFile;
 use yii\helpers\Inflector;
 use yii\helpers\Json;
@@ -42,7 +43,7 @@ class FileUploadModel extends \yii\base\Model {
 
     public function toJson()
     {
-        return Json::encode(['filelink' => $this->getUrl(), 'filename' => $this->normalizeFilename()]);
+        return Json::encode(['filelink' => Url::to([$this->getUrl()]), 'filename' => $this->normalizeFilename()]);
     }
 
     public function getPath()

@@ -11,6 +11,7 @@ namespace yii\redactor\actions;
 use Yii;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
+use yii\helpers\Url;
 use yii\web\HttpException;
 
 /**
@@ -39,7 +40,7 @@ class ClipboardUploadAction extends \yii\base\Action
     {
         if ($this->_contentType && $this->_data) {
             if (file_put_contents($this->getPath(), base64_decode($this->_data))) {
-                echo Json::encode(['filelink' => $this->getUrl(), 'filename' => $this->getFilename()]);
+                echo Json::encode(['filelink' => Url::to([$this->getUrl()]), 'filename' => $this->getFilename()]);
             }
         }
     }

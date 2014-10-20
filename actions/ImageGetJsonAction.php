@@ -9,6 +9,7 @@
 namespace yii\redactor\actions;
 
 use Yii;
+use yii\helpers\Url;
 use yii\web\HttpException;
 use yii\helpers\FileHelper;
 use yii\helpers\Json;
@@ -31,15 +32,18 @@ class ImageGetJsonAction extends \yii\base\Action {
 
     public function run()
     {
-        $files = FileHelper::findFiles($this->getPath(), ['recursive' => true, 'only' => ['*.jpg', '*.jpeg', '*.jpe', '*.png', '*.gif']]);
-        if (is_array($files) && count($files)) {
-            $result = [];
-            foreach ($files as $file) {
-                $url = $this->getUrl($file);
-                $result[] = ['thumb' => $url, 'image' => $url];
+        $result = [];
+        $path = $this->getPath();
+        if (is_dir($path)) {
+            $files = FileHelper::findFiles($this->getPath(), ['recursive' => true, 'only' => ['*.jpg', '*.jpeg', '*.jpe', '*.png', '*.gif']]);
+            if (is_array($files) && count($files)) {
+                foreach ($files as $file) {
+                    $url = Url::to([$this->getUrl($file)]);
+                    $result[] = ['thumb' => $url, 'image' => $url];
+                }
             }
-            echo Json::encode($result);
         }
+        echo Json::encode($result);
     }
 
     protected function getPath()
