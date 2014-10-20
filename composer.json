@@ -1,13 +1,12 @@
 {
-    "name": "yiidoc/yii2-redactor",
-    "description": "Extension redactor for Yii2 Framework.",
+    "name": "opus-online/yii2-redactor",
+    "description": "Extension redactor for Yii2 Framework. Forked from yiidoc/yii2-redactor",
     "keywords": ["yii2", "extension", "redactor", "WYSIWYG", "html editor", "imperavi"],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yiidoc/yii2-redactor/issues?state=open",
-        "wiki": "http://www.yiidoc.com/wiki/",
-        "source": "https://github.com/yiidoc/yii2-redactor"
+        "issues": "https://github.com/opus-online/yii2-redactor/issues?state=open",
+        "source": "https://github.com/opus-online/yii2-redactor"
     },
     "authors": [
         {
