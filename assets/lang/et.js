@@ -1,5 +1,5 @@
 (function ($) {
-    $.Redactor.opts.langs['en'] = {
+    $.Redactor.opts.langs['et'] = {
         html: 'HTML',
         video: 'Lisa video',
         image: 'Lisa pilt',
@@ -9,7 +9,7 @@
         link_edit: 'Muuda linki',
         unlink: 'Eemalda link',
         formatting: 'Vormindamine',
-        paragraph: 'Tavaline tekst',
+        paragraph: 'Paragrahv',
         quote: 'Tsitaat',
         code: 'Kood',
         header1: 'Pealkiri 1',
@@ -62,7 +62,7 @@
         align_right: 'Joonda tekst paremale',
         align_justify: 'Joonda ühtlaselt',
         horizontalrule: 'Sisesta horisontaalne joon',
-        deleted: 'Kustutatud',
+        deleted: 'Läbikriipsutatud',
         anchor: 'Ankur',
         link_new_tab: 'Ava link uues tabis',
         underline: 'Allajoonitud',
