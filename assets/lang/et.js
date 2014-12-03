@@ -25,7 +25,7 @@
         orderedlist: 'Järjestatud nimekiri',
         outdent: 'Suurenda taanet',
         indent: 'Vähenda taanet',
-        cancel: 'Ühista',
+        cancel: 'Tühista',
         insert: 'Sisesta',
         save: 'Salvesta',
         _delete: 'Kustuta',
